@@ -1,0 +1,252 @@
+//#EDC7B7 - #EEE2DC - #BAB2B5 - #123C69 - #AC3B61
+$bgColor: #EEE2DC;
+$menuColor: #123C69;
+$buttonColorOff: #BAB2B5;
+$buttonColorOn: #8b002e;
+body {
+    transition: all ease 1s;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.wrapper {}
+
+.content {
+    flex: 1 1 auto;
+    background-color: $bgColor;
+}
+
+.logo {
+    max-width: 750px;
+    margin: 0 0 0 100px;
+    h1 {
+        color: #534A50;
+        font-size: 45px;
+        padding: 35px 0 35px 0;
+    }
+}
+
+.img_center {
+    display: flex;
+    justify-content: center;
+    margin: 0 5% 0 5%;
+}
+
+.attack_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    img {
+        width: 1200px;
+        max-width: 100%;
+        text-align: center;
+        //border: solid 5px #123C69;
+        -moz-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+    }
+    img:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+}
+
+//burger
+.c-burger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.c-burger {
+    outline: none;
+}
+
+.c-burger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #fff;
+}
+
+.c-burger span::before,
+.c-burger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    left: 0;
+    height: 8px;
+    background: #fff;
+    content: "";
+}
+
+.c-burger span::before {
+    top: -20px;
+}
+
+.c-burger span::after {
+    bottom: -20px;
+}
+
+.c-burger {
+    background: $buttonColorOn;
+}
+
+.c-burger-line span {
+    transition: background 0s 0.3s;
+}
+
+.c-burger-line span::before,
+.c-burger-line span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s 0s;
+}
+
+.c-burger-line span::before {
+    transition-property: top, transform;
+}
+
+.c-burger-line span::after {
+    transition-property: bottom, transform;
+}
+
+.c-burger-line.is-active {
+    background: $buttonColorOff;
+}
+
+.c-burger-line.is-active span {
+    background: none;
+}
+
+.c-burger-line.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.c-burger-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.c-burger-line.is-active span::before,
+.c-burger-line.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+#menu {
+    width: 300px;
+    margin-left: -204px;
+    background: $menuColor;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease 1s;
+}
+
+.body-active {
+    margin-left: 300px;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}
+
+.nav-active {
+    img {
+        padding: 0 0 0 20px;
+    }
+}
+
+.list {
+    margin: 40px 0 0 20px;
+    line-height: 55px;
+    font-size: 30px;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+//columns
+.columns_row {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.columns_text {
+    width: 400px;
+    height: 400px;
+}
+
+.columns {
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columns__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 0 10%;
+}
+
+.columns__body {
+    flex: 1 1 auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+.columns__title {
+    margin: 0px 0px 35px 0px;
+    font-size: 20px;
+}
+
+.columns__text {
+    font-size: 16px;
+    color: #333;
+    line-height: 24px;
+}
+
+.footer {}
+
+.footer_row {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    align-items: center;
+    padding: 0 45px 0 0;
+    background-color: black;
+    h1 {
+        color: white;
+        font-size: 20px;
+    }
+}

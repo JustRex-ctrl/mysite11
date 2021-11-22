@@ -1,0 +1,40 @@
+@media(max-width: 1000px) {
+    .container {
+        max-width: 670px;
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .columns__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .columns__title {
+        padding: 20px 0 0 0;
+    }
+    .columns__text {
+        padding: 0 0 20px 0;
+    }
+    .body-active {
+        margin-left: 0px;
+        background: #123C69;
+    }
+    .nav-active {
+        background: #123C69;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+    #menu {
+        width: 240px;
+    }
+    .logo {
+        margin: 0 0 0 50px;
+    }
+}
